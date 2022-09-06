@@ -1,7 +1,7 @@
 import React from 'react'
 import { Stack, Box } from '@mui/material'
 import VideoCard from './VideoCard'
-import ChannelCard from '../ChannelCard'
+import ChannelCard from './ChannelCard'
 
 const Videos = ({videos}) => {
   return (
