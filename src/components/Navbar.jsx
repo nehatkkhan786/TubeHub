@@ -20,16 +20,17 @@ const Navbar = () => {
    <Stack direction="row"
     alignItems='center'
     p={2}
-    sx={{position:'sticky', background:'#000', top:0, justifyContent:'space-between'}}
+    sx={{position:'sticky', background:'#000', top:0, justifyContent:'space-between', flexDirection:{xs:'column', md:'row'}}}
     >
 
-      <Box onClick={()=>navigate('/')} sx={{display:{xs:'none',md:'flex' }, alignItems:'center', justifyContent:'center', cursor:'pointer',}}>
+      <Box onClick={()=>navigate('/')} sx={{display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer',}}>
          <PlayCircleFilledIcon sx={{fontSize:40, color:'orange', display:'flex'}} /> 
          <Typography sx={{color:'white', ml:1}}>TubeHub</Typography>
       </Box>
-      
+
+      <Box sx={{}}>
       <Paper component='form'
-      sx={{borderRadius:20, border:'1px solid #e3e3e3', pl:2, boxShadow:'none'}}
+      sx={{borderRadius:20, border:'1px solid #e3e3e3', pl:2, boxShadow:'none',}}
       onSubmit={handleSubmit}
       >
           <input
@@ -43,6 +44,9 @@ const Navbar = () => {
             <SearchOutlined sx={{color:'orange', p:'10px'}}/>
           </IconButton>
       </Paper>
+      </Box>
+      
+     
    </Stack>
   )
 }
